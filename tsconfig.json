@@ -1,0 +1,59 @@
+{
+    // set compiiler options for the project
+    // this specifies the root files and the compiler options required to compile the project
+    "compilerOptions": {
+        // generate source map file for debugging purposes
+        "sourceMap": true,
+        // alert when type cannot be inferred
+        "noImplicitAny": true,
+        // set modue systwm for the program
+        "module":"ESNext",
+        // what target of JS should be emitted from the given TypeScript
+        "target": "ES5",
+        // definition files that the compiler uses
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        // do not show comments in output
+        "removeComments": true,
+        // allow default imports from modules without default exports
+        "allowSyntheticDefaultImports": true,
+        // specifies jsx code generation
+        "jsx": "react-jsx",
+        // allow JS files to be imported instead of just .ts and .tsx files
+        "allowJs": true,
+        // will look for files starting at the same folder as the tsconfig
+        "baseUrl": "./",
+        // allows the import of Common JS modules inn compliance with es6
+        "esModuleInterop": true,
+        // inclucdes imports of .json modules
+        "resolveJsonModule": true,
+        // node for modern code
+        "moduleResolution": "node",
+        // suuport for transipile to older version of JS
+        "downlevelIteration": true,
+        // specify path map relative to base url* 
+        "paths": {
+            "components/*": [
+                "src/components/*"
+            ]
+        },
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "noEmit": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "include": [
+            "./src",
+            "./webpack.config.ts"
+        ]
+
+        
+
+
+
+
+    }
+}
