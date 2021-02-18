@@ -44,16 +44,10 @@
         "noFallthroughCasesInSwitch": true,
         "noEmit": true,
         "skipLibCheck": true,
-        "strict": true,
-        "include": [
-            "./src",
-            "./webpack.config.ts"
-        ]
-
-        
-
-
-
-
-    }
+        "strict": true
+    },
+    "include": [
+        "./src",
+        "./webpack.config.ts"
+    ]
 }
