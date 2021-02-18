@@ -4,6 +4,10 @@
   "description": "![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
+    "start:dev": "webpack-cli serve --mode=development --env development --open --hot",
+    "build": "webpack --mode=production --env proudction --progress",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint './src/**/*{ts,tsx}' --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
