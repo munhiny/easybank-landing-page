@@ -51,7 +51,7 @@ const webpackConfig = (env:any): Configuration => ({
         }),
         new ForkTsCheckerWebpackPlugin({
             eslint: {
-                files: "src/**/*.{ts,tsx,js,jsx}" 
+                files: "./src/**/*.{ts,tsx,js,jsx}" 
             }
         }),
         new MiniCssExtractPlugin({
