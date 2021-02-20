@@ -1,10 +1,11 @@
+/* eslint-disable no-use-before-define */
 import path from "path";
 import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
 
-const webpackConfig = (env): Configuration => ({
+const webpackConfig = (env:any): Configuration => ({
     entry: "./src/index.tsx",
     ...(env.production || !env.development ? {} : {
         devtool: "eval-source-map"

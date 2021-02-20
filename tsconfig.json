@@ -6,8 +6,8 @@
         "sourceMap": true,
         // alert when type cannot be inferred
         "noImplicitAny": true,
-        // set modue systwm for the program
-        "module":"ESNext",
+        // set module system for the program
+        "module":"commonjs",
         // what target of JS should be emitted from the given TypeScript
         "target": "ES5",
         // definition files that the compiler uses
