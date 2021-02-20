@@ -1,0 +1,13 @@
+@import '../scss/globals.scss';
+@import '../scss/variables.scss';
+
+.links {
+    a {
+        font: $font-sm;
+        color: $grayishBlue;
+        
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    } 
+}

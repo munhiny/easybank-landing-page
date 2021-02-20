@@ -1,7 +1,7 @@
-import "../scss/styles.scss";
+import EbHeader from "./EbHeader";
 
 const App = (): JSX.Element => {
-    return <h1>Hello World</h1>;
+    return <EbHeader />;
 };
 
 export default App;

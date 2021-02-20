@@ -1,0 +1,27 @@
+@import '../scss/globals';
+@import '../scss/variables';
+
+.header {
+    font-size: $font-sm;
+    nav {
+        padding: 24px;
+
+    };
+
+    &__logo {
+        // 141 * 22
+        img {
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+
+    }
+
+    &__cta {
+        font-size: $font-sm;
+        color: $white;
+
+
+    }
+
+};
