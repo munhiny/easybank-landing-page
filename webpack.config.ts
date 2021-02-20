@@ -4,6 +4,8 @@ import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import {TsconfigPathsPlugin} from "tsconfig-paths-webpack-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+
 
 const webpackConfig = (env:any): Configuration => ({
     entry: "./src/index.tsx",
@@ -29,6 +31,10 @@ const webpackConfig = (env:any): Configuration => ({
                 },
                 exclude: /dist/
             },
+            {
+                test:/\.scss?$/,
+                use: ["style-loader","css-loader","sass-loader"]
+            }
         
         ]
     },
@@ -45,8 +51,12 @@ const webpackConfig = (env:any): Configuration => ({
         }),
         new ForkTsCheckerWebpackPlugin({
             eslint: {
-                files: ".src/**/*.{ts,tsx,js,jsx}" 
+                files: "src/**/*.{ts,tsx,js,jsx}" 
             }
+        }),
+        new MiniCssExtractPlugin({
+            filename: env.development? '[name].css': '[name].hash.css',
+            chunkFilename: env.development? '[id].css' : '[id].[hash].css'
         })
     ]
 })
