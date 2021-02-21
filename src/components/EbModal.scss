@@ -1,0 +1,9 @@
+@import './../../scss/globals.scss';
+@import './../../scss/variables.scss';
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    right: 50%;
+}

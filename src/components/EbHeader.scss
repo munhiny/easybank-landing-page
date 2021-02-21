@@ -1,6 +1,5 @@
-@import '../scss/globals';
-@import '../scss/variables';
-
+@import './../../scss/globals.scss';
+@import './../../scss/variables.scss';
 .header {
     font-size: $font-sm;
 
@@ -22,7 +21,6 @@
         font-size: $font-sm;
         color: $white;
         transition: opacity 300ms ease-in-out;
-
 
         &:hover {
             opacity: .7;

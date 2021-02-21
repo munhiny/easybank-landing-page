@@ -1,4 +1,4 @@
-import EbHeader from "./EbHeader";
+import EbHeader from "./components/EbHeader";
 
 const App = (): JSX.Element => {
     return <EbHeader />;

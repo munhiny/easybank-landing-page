@@ -32,8 +32,8 @@ const EbHeader = (): JSX.Element => {
                 <a href="/" className="button header__cta hide-for-mobile">
                     Request Invite
                 </a>
-                {showModal && renderModal()}
             </nav>
+            {showModal && renderModal()}
         </header>
     );
 };
