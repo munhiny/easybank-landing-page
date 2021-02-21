@@ -1,17 +1,15 @@
 import "./EbHamburger.scss";
-import {useState} from "react";
 
-const EbHamburger = (): JSX.Element => {
-    const [isOpen, setIsOpen] = useState(false);
+type Props = {
+    showModal?: boolean;
+};
 
-    const onClickHandler = () => {
-        setIsOpen(!isOpen);
-    };
-
+const EbHamburger = ({showModal = false}: Props): JSX.Element => {
     return (
         <div
-            onClick={onClickHandler}
-            className={!isOpen ? "hamburger hide-for-desktop" : "hamburger close hide-for-desktop"}
+            className={
+                !showModal ? "hamburger hide-for-desktop" : "hamburger close hide-for-desktop"
+            }
         >
             <span className="btn-line"></span>
             <span className="btn-line"></span>
