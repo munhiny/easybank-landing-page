@@ -3,7 +3,7 @@
 
 .hamburger {
     cursor: pointer;
-    > span {
+      .btn-line {
         display: block;
         width: 26px;
         height: 2px;
@@ -14,5 +14,23 @@
 
         }
 
+
+
     } 
+    &.close {
+        transform: rotate(180deg);
+
+        .btn-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 2px);
+        }
+
+        .btn-line:nth-child(2){
+            display: none;
+        }
+
+        .btn-line:nth-child(3) {
+            transform: rotate(-45deg) translate(2px, 3px);
+        }
+
+    }
 };

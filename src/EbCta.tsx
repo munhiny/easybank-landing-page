@@ -5,13 +5,11 @@ const EbCta = (): JSX.Element => {
 
     return (
         <div className="links hide-for-mobile">
-            {links.map((link, index) => {
-                return (
-                    <a key={index} href="/">
-                        {link}
-                    </a>
-                );
-            })}
+            {links.map((link, index) => (
+                <a key={index} href="/">
+                    {link}
+                </a>
+            ))}
         </div>
     );
 };

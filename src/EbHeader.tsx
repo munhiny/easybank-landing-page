@@ -4,7 +4,7 @@ import "./EbHeader.scss";
 
 const EbHeader = (): JSX.Element => {
     return (
-        <header className="header ">
+        <header className="header">
             <nav className="flex flex-jc-sb flex-ai-ac">
                 <a href="/" className="header__logo">
                     <img src="../images/logo.svg"></img>
