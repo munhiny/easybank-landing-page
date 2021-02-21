@@ -2,6 +2,7 @@
 @import '../scss/variables';
 
 .hamburger {
+    cursor: pointer;
     > span {
         display: block;
         width: 26px;

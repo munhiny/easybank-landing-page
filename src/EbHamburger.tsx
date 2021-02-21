@@ -2,11 +2,11 @@ import "./EbHamburger.scss";
 
 const EbHamburger = (): JSX.Element => {
     return (
-        <a href="/" className="hamburger hide-for-desktop">
+        <div className="hamburger hide-for-desktop">
             <span></span>
             <span></span>
             <span></span>
-        </a>
+        </div>
     );
 };
 

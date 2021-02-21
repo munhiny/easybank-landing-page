@@ -1,13 +1,17 @@
 import "./EbCta.scss";
 
 const EbCta = (): JSX.Element => {
+    const links = ["Home", "About", "Contact", "Blog", "Careers"];
+
     return (
         <div className="links hide-for-mobile">
-            <a href="/"> Home </a>
-            <a href="/"> About</a>
-            <a href="/"> Contact</a>
-            <a href="/"> Blog</a>
-            <a href="/"> Careers</a>
+            {links.map((link, index) => {
+                return (
+                    <a key={index} href="/">
+                        {link}
+                    </a>
+                );
+            })}
         </div>
     );
 };
