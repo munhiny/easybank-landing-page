@@ -3,8 +3,9 @@
 
 .header {
     font-size: $font-sm;
+
     nav {
-        padding: 24px;
+        padding: 1.0625rem 1.5rem;
 
     };
 
@@ -20,7 +21,12 @@
     &__cta {
         font-size: $font-sm;
         color: $white;
+        transition: opacity 300ms ease-in-out;
 
+
+        &:hover {
+            opacity: .7;
+        }
 
     }
 
