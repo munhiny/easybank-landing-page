@@ -1,9 +1,19 @@
-@import './../../scss/globals.scss';
-@import './../../scss/variables.scss';
+@import './../../scss/_globals.scss';
+@import './../../scss/_variables.scss';
 
 .modal {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     z-index: 1;
-    left: 50%;
-    right: 50%;
+    // TODO remove this
+    border: 1px solid red;
+    width: 20.375rem;
+    height: 16.625rem;
+    margin: 6.5%;
+    border-radius: .3125rem;
+
+> a{
+    color: $darkBlue;
+}
 }
