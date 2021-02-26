@@ -1,13 +1,10 @@
-import {useState, useEffect} from "react";
-
+import {useState} from "react";
 import "./EbHeader.scss";
 
 const EbHeader = (): JSX.Element => {
     const links = ["Home", "About", "Contact", "Blog", "Careers"];
     const [showModal, setShowModal] = useState(false);
     const onClickHandler = () => {
-        const overlay = document.querySelector(".overlay");
-
         setShowModal(!showModal);
     };
 
