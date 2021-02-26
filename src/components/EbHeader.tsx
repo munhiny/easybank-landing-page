@@ -11,28 +11,22 @@ const EbHeader = (): JSX.Element => {
         setShowModal(!showModal);
     };
 
-    useEffect(() => {
-        const overLay = document.querySelector(".overlay");
-        const menu = document.querySelector(".header__menu");
+    const displayFade = () => {
         const body = document.querySelector("body");
-        const fadeIn = overLay?.classList.contains("fade-in");
+        const fadeIn = document.querySelector(".overlay")?.classList.contains("fade-in");
         if (showModal && !fadeIn) {
-            overLay?.classList.remove("fade-out");
-            overLay?.classList.add("fade-in");
-            menu?.classList.add("fade-in");
             body?.classList.add("no-scroll");
+            return ` fade-in`;
         } else if (!showModal && fadeIn) {
-            overLay?.classList.remove("fade-in");
-            overLay?.classList.add("fade-out");
-            menu?.classList.add("fade-out");
             body?.classList.remove("no-scroll");
+            return ` fade-out`;
         }
-        return;
-    }, [showModal]);
+        return "";
+    };
 
     return (
-        <header className={"header" + (showModal ? " open" : "")}>
-            <div className="overlay"></div>
+        <header className={`header ${showModal ? " open" : ""}`}>
+            <div className={`overlay ${displayFade()}`}></div>
             <nav className="container flex flex-jc-sb flex-ai-ac">
                 <a href="/" className="header__logo">
                     <img src="../images/logo.svg"></img>
@@ -54,9 +48,9 @@ const EbHeader = (): JSX.Element => {
                 </a>
             </nav>
             <div
-                className={
-                    "header__menu container" + (!showModal ? " has-fade" : "") + " hide-for-desktop"
-                }
+                className={`header__menu container ${
+                    !showModal ? " has-fade" : ""
+                } hide-for-desktop ${displayFade()}`}
             >
                 {links.map((link, index) => (
                     <a key={index} href="/">
